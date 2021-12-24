@@ -9,7 +9,7 @@ Requirments
 Steps
     x. Clean cra 
 
-    x. build init ui with styled components 
+    x. build  ui with styled components 
 
     x. add redux 
 
