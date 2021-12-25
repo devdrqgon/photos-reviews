@@ -1,10 +1,11 @@
 import GlobalStyle from './global'
+import Main from './features/Main'
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
-      <b> hi </b>
+      <Main/>
     </>
   )
 }

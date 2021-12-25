@@ -6,15 +6,16 @@ Requirments
         - I want the app to notify me when the image fetch has failed 
         - I want to be able to open my saved images 
 
-Steps
-    x. Clean cra 
-
-    x. build  ui with styled components 
-
-    x. add redux 
+tbd
+     header bottomborder full ( flex:firstchild: padding-left)
 
 
-    x. add 2 very good unit tests 
+Architecture & Flow
+    get saved imagesURLs Array from localStorage
 
-    x. persist state 
-    https://blog.bitsrc.io/5-methods-to-persisting-state-between-page-reloads-in-react-8fc9abd3fa2f
+    when user saves a new image we add its URL to our store and we save it to localstorage
+
+access key 
+S00f6b0q_JEjib3qrC4Bcbnt6sLzBQHxPt-XcmFEhhw
+secret key 
+2Ytw866wcVXN_KYQzUwxS3blxZ7ZGjhVNIrAkyX4QgA
