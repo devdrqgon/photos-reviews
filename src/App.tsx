@@ -1,11 +1,11 @@
 import GlobalStyle from './global'
-import Main from './features/Main'
+import ImagesReviewer from './features/ImagesReviewer'
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
-      <Main/>
+      <ImagesReviewer/>
     </>
   )
 }

@@ -4,7 +4,7 @@ import ImagesNavigator from '../components/ImagesNavigator/ImagesNavigator'
 import MainCard from '../components/layouts/MainCard'
 import SavedImages from '../components/SavedImages/SavedImages'
 
-const Main = () => {
+const ImagesReviewer = () => {
     return (
         <MainCard>
             <Header>
@@ -16,4 +16,4 @@ const Main = () => {
     )
 }
 
-export default Main
+export default ImagesReviewer
