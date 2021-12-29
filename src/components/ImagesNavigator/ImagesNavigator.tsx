@@ -3,7 +3,7 @@ import imgBackground from "assets/imgBackground.png"
 import ImgContainer from 'components/layouts/ImgContainer'
 import ButtonBase from 'components/ui-lib/ButtonBase'
 import { useAppDispatch, useAppSelector } from 'app/hooks'
-import { fetchedImgUrl, handleFetchImgUrlThunk, initSavedImgsListFromLocalStorage, handleApproveImageThunk, handleRejectImageThunk } from 'features/ImagesReviewer.slice'
+import { fetchedImgUrl, FetchImgThunk, initSavedImgsListFromLocalStorage, handleApproveImageThunk, handleRejectImageThunk } from 'features/ImagesReviewer.slice'
 
 const ImagesNavigator = () => {
   const dispatch = useAppDispatch();
@@ -18,7 +18,7 @@ const ImagesNavigator = () => {
   }
 
   const handleFetchImgUrl = () => {
-    dispatch(handleFetchImgUrlThunk())
+    dispatch(FetchImgThunk())
   }
 
 

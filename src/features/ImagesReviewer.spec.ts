@@ -1,43 +1,29 @@
 
-import ImagesReviewerReducer, { ImagesReviewerState } from './ImagesReviewer.slice';
+import { useAppDispatch } from 'app/hooks';
+import { store } from 'app/store';
+import ImagesReviewerReducer, { handleApproveImageThunk } from './ImagesReviewer.slice';
 
 
 describe('imagesReviewer feature', () => {
-    // const initialState: ImagesReviewerState = {
-    //   value: 3,
-    //   status: 'idle',
-    // };
 
-    //Basic test 
     it('should handle initial state', () => {
         expect(ImagesReviewerReducer(undefined, { type: 'unknown' })).toEqual({
+            fetchedImgUrl: null,
             savedImgsUrls: [],
             rejectedImgsUrls: [],
         })
     })
 
-    it('it should handle Fetch Image', () => {
-        // Arrange
-            //Arrange reducer  
-            
-        // Act
-           
-        //Assert 
-            expect(localStorage.getItem(''))
-
-        // 
+    it('it should handle Approve Image', () => {
+        store.dispatch(handleApproveImageThunk("dummyApprovedImgUrl"))
+        expect(store.getState().imagesReviewer.savedImgsUrls.includes("dummyApprovedImgUrl")).toBe(true)
     })
 
-    it.todo('it should handle Approve Image')
-    it.todo('it should handle Reject Image')
-
-
-
+    it('it should save Approved Image in localstorage', () => {
+        store.dispatch(handleApproveImageThunk("dummyApprovedImgUrl"))
+        expect(store.getState().imagesReviewer.savedImgsUrls.includes("dummyApprovedImgUrl")).toBe(true)
+    })
+    
 })
 
 
-
-// const initialState: ImagesReviewerState = {
-//     savedImgsUrls: [],
-//     rejectedImgsUrls: ["DummyLink"],
-//   }
