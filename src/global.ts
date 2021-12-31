@@ -7,23 +7,23 @@ export default createGlobalStyle`
         padding: 0;
         box-sizing: border-box; 
     }
-    /**
-        Since the app only contains one card displayed in the center,
-        a flexbox container is defined in body.
-    */
+   
+    
     body {
         font-family: 'Open Sans', sans-serif;
         font-size: 14px;
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        height: 100vh;
-        width: 100vw;
         background: #FBFCFD;
+        &::-webkit-scrollbar {
+            width: 0.25rem;
+        }
+        &::-webkit-scrollbar-track {
+            background: #1e1e24;
+        }
+       
     }
-
-  
-
 `
 
 // ${props => props.theme.colors.text}

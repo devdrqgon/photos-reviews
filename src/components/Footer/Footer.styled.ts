@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 const ImagesNavigatorContainer = styled.div`
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: transparent;
+    justify-content: space-around;
+    min-height: 4vh;
     border: none;
     margin: 20px 0;
+    width: 100%;
 `
 
 export default ImagesNavigatorContainer

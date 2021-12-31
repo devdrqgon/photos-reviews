@@ -49,7 +49,7 @@ export const savedImgsUrls = (state: RootState) => state.imagesReviewer.savedImg
 export const rejectedImgsUrls = (state: RootState) => state.imagesReviewer.rejectedImgsUrls
 
 const getRandomImage = async () => {
-    return (await axios.get('https://api.unsplash.com/photos/random?client_id=S00f6b0q_JEjib3qrC4Bcbnt6sLzBQHxPt-XcmFEhhw')).data.urls.thumb as string
+    return (await axios.get('https://api.unsplash.com/photos/random?client_id=S00f6b0q_JEjib3qrC4Bcbnt6sLzBQHxPt-XcmFEhhw')).data.urls.small as string
 }
 
 
