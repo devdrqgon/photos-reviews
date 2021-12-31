@@ -52,7 +52,6 @@ const getRandomImage = async () => {
     return (await axios.get('https://api.unsplash.com/photos/random?client_id=S00f6b0q_JEjib3qrC4Bcbnt6sLzBQHxPt-XcmFEhhw')).data.urls.small as string
 }
 
-
 const fetchCallback: AsyncThunkPayloadCreator<void, void, { state: RootState }> =
     async (_, { dispatch, getState }) => {
         const _imgUrl = await getRandomImage()
@@ -73,8 +72,6 @@ export const handleApproveImageThunk = (_newImgUrl: string): AppThunk<void> => (
     dispatch(FetchImgThunk())
 }
 
-
-
 export const handleRejectImageThunk = (_newImgUrl: string): AppThunk<void> => (
     dispatch
 ) => {
@@ -82,8 +79,6 @@ export const handleRejectImageThunk = (_newImgUrl: string): AppThunk<void> => (
     dispatch(imagesReviewerSlice.actions.addRejectedImgUrl(_newImgUrl))
     dispatch(FetchImgThunk())
 }
-
-
 
 export const initSavedImgsListFromLocalStorage = (): AppThunk => (
     dispatch
@@ -93,6 +88,7 @@ export const initSavedImgsListFromLocalStorage = (): AppThunk => (
         dispatch(imagesReviewerSlice.actions.initSavedImgs(JSON.parse(retrivedData) as string[]))
     }
 }
+
 export const initRejectedImgsListFromLocalStorage = (): AppThunk<void> => (
     dispatch
 ) => {

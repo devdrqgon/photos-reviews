@@ -1,6 +1,6 @@
 import { useAppSelector } from 'app/hooks';
 import Img from 'components/layouts/ImgContainer';
-import { savedImgsUrls } from 'features/ImagesReviewer.slice';
+import { savedImgsUrls } from 'features/ImagesReviewer/ImagesReviewer.slice';
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import SavedImagesContainer from './SavedImages.styled'

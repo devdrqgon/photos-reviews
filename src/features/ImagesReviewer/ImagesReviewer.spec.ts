@@ -1,5 +1,4 @@
 
-import { useAppDispatch } from 'app/hooks';
 import { store } from 'app/store';
 import ImagesReviewerReducer, { handleApproveImageThunk } from './ImagesReviewer.slice';
 
@@ -19,10 +18,6 @@ describe('imagesReviewer feature', () => {
         expect(store.getState().imagesReviewer.savedImgsUrls.includes("dummyApprovedImgUrl")).toBe(true)
     })
 
-    it('it should save Approved Image in localstorage', () => {
-        store.dispatch(handleApproveImageThunk("dummyApprovedImgUrl"))
-        expect(store.getState().imagesReviewer.savedImgsUrls.includes("dummyApprovedImgUrl")).toBe(true)
-    })
     
 })
 

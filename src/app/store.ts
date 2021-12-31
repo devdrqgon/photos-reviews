@@ -1,5 +1,5 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
-import imagesReviewerReducer from 'features/ImagesReviewer.slice'
+import imagesReviewerReducer from 'features/ImagesReviewer/ImagesReviewer.slice'
 
 export const store = configureStore({
   reducer: {
