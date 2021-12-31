@@ -1,5 +1,5 @@
+import ImagesReviewer from 'features/ImagesReviewer/ImagesReviewer'
 import GlobalStyle from './global'
-import ImagesReviewer from './features/ImagesReviewer'
 
 const App = () => {
   return (
