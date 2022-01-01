@@ -1,7 +1,7 @@
 import { AsyncThunkPayloadCreator, createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState, AppThunk } from 'app/store';
 import axios from 'axios';
-
+import env from 'react-dotenv';
 export interface ImagesReviewerState {
     fetchedImgUrl: string | null
     savedImgsUrls: string[]
@@ -49,7 +49,7 @@ export const savedImgsUrls = (state: RootState) => state.imagesReviewer.savedImg
 export const rejectedImgsUrls = (state: RootState) => state.imagesReviewer.rejectedImgsUrls
 
 const getRandomImage = async () => {
-    return (await axios.get('https://api.unsplash.com/photos/random?client_id=S00f6b0q_JEjib3qrC4Bcbnt6sLzBQHxPt-XcmFEhhw')).data.urls.small as string
+    return (await axios.get(`https://api.unsplash.com/photos/random?client_id=${env.API_CLIENT_ID}`)).data.urls.small as string
 }
 
 const fetchCallback: AsyncThunkPayloadCreator<void, void, { state: RootState }> =
