@@ -12,7 +12,7 @@ const MainCard = styled.div`
     padding: 10px 20px;
     border: 1px #d0d0d0 solid;
     width: 30vw;
-    height: 93vh;
+    height: 95vh;
 
     @media(max-width: 768px){
         width: 70vw;
@@ -20,3 +20,4 @@ const MainCard = styled.div`
     }
 `
 export default MainCard
+
